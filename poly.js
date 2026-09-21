@@ -4,12 +4,15 @@ function checkGrade() {
         let showRemark = document.getElementById("remark");
 
         if (userInput == "") {
-          alert("Please kindly input a score");
+          document.getElementById("show").innerHTML = 'Please kindly input a Grade Point' ;
+          document.getElementById("remark").innerHTML = 'Please kindly input a Grade Point' ;
         } else if (userInput > 4.00) {
-          alert("Please enter a valid score");
+          document.getElementById("show").innerHTML = 'Enter a valid Grade Point' ;
+          document.getElementById("remark").innerHTML = 'Enter a valid Grade Point' ;
           document.getElementById("user").value = "";
         } else if (userInput < 0) {
-          alert("Please enter a valid score");
+          document.getElementById("show").innerHTML = 'Enter a valid Grade Point' ;
+          document.getElementById("remark").innerHTML = 'Enter a valid Grade Point' ;
         } else {
           if (userInput >= 3.50) {
             showGrade.innerHTML = `<h1>${"Your Grade is: Distinction"}</h1>`;
