@@ -1,26 +1,36 @@
-body{
-    background-color: whitesmoke;
-}
+/* =========================
+   GENERAL
+========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
-
-
-.grading-navbar {
-    background-color: #008751;
-    
+body {
+    background-color: whitesmoke;
+    font-family: Arial, sans-serif;
+    color: #008751;
 }
 
 
+/* =========================
+   NAVBAR
+========================= */
 
+.grading-navbar {
+    background-color: #008751;
+    padding: 15px 0;
+}
 
 .grading-navbar .navbar-brand {
     color: white;
-    font-size: 10px;
+    font-size: 18px;
     font-weight: 700;
 }
 
@@ -28,14 +38,12 @@ body{
     color: white;
 }
 
-
-
-
 .grading-navbar .nav-link {
     color: white;
-    font-size: 10px;
+    font-size: 15px;
     font-weight: 500;
-    margin-left: 15px;
+    margin-left: 18px;
+    padding: 8px 0;
     transition: 0.3s ease;
 }
 
@@ -48,11 +56,9 @@ body{
     font-weight: 700;
 }
 
-
-
-
 .grading-navbar .navbar-toggler {
     border: 2px solid white;
+    padding: 6px 9px;
 }
 
 .grading-navbar .navbar-toggler:focus {
@@ -63,34 +69,14 @@ body{
     filter: brightness(0) invert(1);
 }
 
-.section-1{
-    width: 100%;
-    height: 50vh;
-    background-color: #008751;
-}
 
-
-
-
-@media (max-width: 767px) {
-
-    .grading-navbar .navbar-nav {
-        padding-top: 15px;
-    }
-
-    .grading-navbar .nav-link {
-        margin-left: 0;
-        padding: 10px 0;
-    }
-
-}
-
-
-
+/* =========================
+   HERO SECTION
+========================= */
 
 .hero-section {
     background-color: #008751;
-    min-height: 320px;
+    min-height: 500px;
 
     display: flex;
     align-items: center;
@@ -98,125 +84,85 @@ body{
 
     text-align: center;
 
+    padding: 80px 20px;
 }
 
-
-
-
 .hero-content {
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
-
-
-
 .hero-small-text {
     color: white;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
 }
-
-
-
 
 .hero-content h1 {
     color: white;
-    font-size: 30px;
+    font-size: clamp(38px, 6vw, 60px);
     font-weight: 700;
-    margin-bottom: 10px;
-}
-
-
-
-
-.hero-text {
-    color: white;
-    font-size: 15px;
+    line-height: 1.15;
     margin-bottom: 20px;
 }
 
-
-
+.hero-text {
+    color: white;
+    font-size: 19px;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
 
 .hero-buttons {
     display: flex;
     justify-content: center;
-    gap: 12px;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-
+.hero-btn,
+.hero-btn-outline {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
 
 .hero-btn {
     background-color: white;
     color: #008751;
-
-    padding: 10px 20px;
-
-    font-weight: 600;
-
-    border-radius: 6px;
+    border: 2px solid white;
 }
 
 .hero-btn:hover {
     background-color: #f0f0f0;
     color: #008751;
+    transform: translateY(-2px);
 }
-
-
 
 .hero-btn-outline {
     background-color: transparent;
     color: white;
-
     border: 2px solid white;
-
-    padding: 8px 22px;
-
-    font-weight: 600;
-
-    border-radius: 6px;
 }
 
 .hero-btn-outline:hover {
     background-color: white;
     color: #008751;
+    transform: translateY(-2px);
 }
 
 
-
-
-@media (max-width: 767px) {
-
-    .hero-section {
-        min-height: 350px;
-        padding: 40px 20px;
-    }
-
-    .hero-content h1 {
-        font-size: 34px;
-    }
-
-    .hero-text {
-        font-size: 16px;
-    }
-
-    .hero-buttons {
-       
-        align-items: center;
-    }
-
-    .hero-btn,
-    .hero-btn-outline {
-        width: 180px;
-    }
-
-}
-
-
-
+/* =========================
+   ABOUT SECTION
+========================= */
 
 .about-section {
     position: relative;
@@ -226,11 +172,8 @@ body{
     background-size: cover;
     background-position: center;
 
-    padding: 80px 20px;
+    padding: 90px 20px;
 }
-
-
-
 
 .about-section::before {
     content: "";
@@ -243,340 +186,512 @@ body{
     z-index: 0;
 }
 
-
-
-
 .about-content {
     position: relative;
     z-index: 1;
 
-    max-width: 1000px;
+    max-width: 850px;
     margin: 0 auto;
 
     text-align: center;
 }
 
-
-
-
 .about-small-title {
     color: #008751;
 
-    font-size: 10px;
-    font-weight: bolder;
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+.about-content h2 {
+    color: #008751;
+
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.2;
+    font-weight: 700;
+
+    margin-bottom: 30px;
+}
+
+.about-text {
+    color: #008751;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    line-height: 1.8;
+
+    max-width: 750px;
+
+    margin: 0 auto 20px;
+}
+
+
+/* =========================
+   EDUCATION SECTION
+========================= */
+
+.education-section {
+    background-color: white;
+    padding: 90px 20px;
+}
+
+.education-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
+}
+
+.section-small-title {
+    color: #008751;
+
+    font-size: 14px;
+    font-weight: 700;
 
     letter-spacing: 3px;
 
     margin-bottom: 10px;
 }
 
-
-
-
-
-.about-content h2 {
-    color: #008751;
-
-    font-size: 25px;
-    font-weight: 700;
-
-    margin-bottom: 30px;
-}
-
-
-
-
-.about-text {
-    color: #008751;
-    font-weight: bold;
-
-    font-size: 10px;
-    line-height: 1.8;
-    margin: 0 auto 20px;
-    max-width: 550px;
-
-    margin-bottom: 10px;
-}
-
-
-
-
-@media (max-width: 767px) {
-
-    .about-section {
-        padding: 60px 20px;
-    }
-
-    .about-content h2 {
-        font-size: 28px;
-    }
-
-    .about-text {
-        font-size: 15px;
-        line-height: 1.7;
-    }
-
-}
-
-
-
-@media (max-width: 767px) {
-
-    .about-section {
-        padding: 55px 20px;
-    }
-
-    .about-content h2 {
-        font-size: 28px;
-    }
-
-    .about-text {
-        font-size: 16px;
-        line-height: 1.7;
-    }
-
-}
-
-
-
-
-.education-section {
-    background-color: white;
-    padding: 60px 20px;
-}
-
-
-
-.education-heading {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.section-small-title {
-    color: #008751;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
-}
-
 .education-heading h2 {
     color: #008751;
-    font-size: 18px;
+
+    font-size: clamp(28px, 4vw, 40px);
     font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.education-intro {
+    color: #008751;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    margin: 0 auto;
 }
 
 
-
+/* =========================
+   EDUCATION CARDS
+========================= */
 
 .education-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
 }
-
-
-
 
 .education-card-link {
     text-decoration: none;
     color: inherit;
-
-    width: 18rem;
 }
 
-
-
 .education-card {
+    height: 100%;
+
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
+
     overflow: hidden;
 
     background-color: white;
 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
     transition: 0.3s ease;
 }
 
-
-
-
 .education-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    transform: translateY(-7px);
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
-
-
-
 
 .education-card-img {
     width: 100%;
-    height: 160px;
+    height: 200px;
 
     object-fit: cover;
 
     display: block;
 }
 
-
-
-
 .education-card-body {
-    padding: 15px;
+    padding: 25px;
 }
-
-
-
 
 .education-card-body h3 {
     color: #008751;
-    font-size: 17px;
-    font-weight: 600;
 
-    margin-bottom: 8px;
+    font-size: 21px;
+    font-weight: 700;
+
+    margin-bottom: 12px;
 }
-
-
-
 
 .education-card-body p {
     color: #008751;
-    font-size: 13px;
-    line-height: 1.5;
 
-    margin-bottom: 0;
+    font-size: 15px;
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+.card-link {
+    color: #008751;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.education-card:hover .card-link {
+    padding-left: 5px;
 }
 
 
-
-
-@media (max-width: 991px) {
-
-    .education-cards {
-        gap: 15px;
-    }
-
-    .education-card-link {
-        width: 30%;
-    }
-
-}
-
-
-
-
-@media (max-width: 767px) {
-
-    .education-section {
-        padding: 50px 20px;
-    }
-
-    .education-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .education-card-link {
-        width: 100%;
-        max-width: 18rem;
-    }
-
-}
-
+/* =========================
+   FOOTER
+========================= */
 
 .footer-section {
     background-color: #008751;
     color: white;
-    padding: 45px 20px 20px;
+
+    padding: 60px 20px 25px;
 }
-
-
-
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 60px;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
 }
 
-
-
-
 .footer-brand {
-    max-width: 350px;
+    max-width: 400px;
 }
 
 .footer-brand h3 {
-    font-size: 18px;
+    color: white;
+
+    font-size: 22px;
     font-weight: 700;
-    margin-bottom: 12px;
+
+    margin-bottom: 15px;
 }
 
 .footer-brand p {
-    font-size: 13px;
-    line-height: 1.6;
+    color: white;
+
+    font-size: 15px;
+    line-height: 1.7;
+
     margin: 0;
 }
-
-
-
 
 .footer-links {
     display: flex;
     flex-direction: column;
-    gap: 7px;
+
+    gap: 10px;
 }
 
 .footer-links h4 {
-    font-size: 16px;
+    color: white;
+
+    font-size: 17px;
     font-weight: 700;
+
     margin-bottom: 8px;
 }
 
 .footer-links a {
     color: white;
+
     text-decoration: none;
-    font-size: 13px;
+
+    font-size: 14px;
+
     transition: 0.3s ease;
 }
 
 .footer-links a:hover {
     color: #d9ffd9;
-    padding-left: 3px;
+    padding-left: 4px;
 }
-
-
-
 
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.3);
 
-    margin-top: 35px;
-    padding-top: 18px;
+    max-width: 1100px;
+
+    margin: 45px auto 0;
+
+    padding-top: 20px;
 
     text-align: center;
 }
 
 .footer-bottom p {
-    font-size: 12px;
+    color: white;
+
+    font-size: 13px;
+
     margin: 0;
 }
 
 
+/* =========================
+   TABLET
+========================= */
 
+@media (max-width: 991px) {
 
-@media (max-width: 767px) {
+    .grading-navbar .nav-link {
+        margin-left: 10px;
+        font-size: 14px;
+    }
 
-    .footer-section {
-        padding: 40px 20px 20px;
+    .hero-section {
+        min-height: 450px;
+    }
+
+    .education-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .education-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 50%;
+        justify-self: center;
     }
 
     .footer-content {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 35px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+
+    /* NAVBAR */
+
+    .grading-navbar {
+        padding: 12px 0;
+    }
+
+    .grading-navbar .navbar-brand {
+        font-size: 17px;
+    }
+
+    .grading-navbar .navbar-nav {
+        padding-top: 15px;
+    }
+
+    .grading-navbar .nav-link {
+        margin-left: 0;
+        padding: 11px 0;
+        font-size: 15px;
+    }
+
+
+    /* HERO */
+
+    .hero-section {
+        min-height: 480px;
+        padding: 70px 20px;
+    }
+
+    .hero-small-text {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+        line-height: 1.2;
+    }
+
+    .hero-text {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .hero-buttons {
         flex-direction: column;
-        gap: 30px;
+        width: 100%;
+    }
+
+    .hero-btn,
+    .hero-btn-outline {
+        width: 220px;
+        text-align: center;
+    }
+
+
+    /* ABOUT */
+
+    .about-section {
+        padding: 70px 20px;
+    }
+
+    .about-small-title {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .about-content h2 {
+        font-size: 30px;
+    }
+
+    .about-text {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+
+    /* EDUCATION */
+
+    .education-section {
+        padding: 70px 20px;
+    }
+
+    .section-small-title {
+        font-size: 12px;
+    }
+
+    .education-heading h2 {
+        font-size: 30px;
+    }
+
+    .education-intro {
+        font-size: 15px;
+    }
+
+    .education-cards {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .education-card:last-child {
+        grid-column: auto;
+        max-width: none;
+        justify-self: auto;
+    }
+
+    .education-card-img {
+        height: 200px;
+    }
+
+    .education-card-body {
+        padding: 22px;
+    }
+
+    .education-card-body h3 {
+        font-size: 20px;
+    }
+
+    .education-card-body p {
+        font-size: 15px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-section {
+        padding: 50px 20px 25px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
     }
 
     .footer-brand {
         max-width: 100%;
+    }
+
+    .footer-brand h3 {
+        font-size: 21px;
+    }
+
+    .footer-brand p {
+        font-size: 14px;
+    }
+
+    .footer-links h4 {
+        font-size: 16px;
+    }
+
+    .footer-links a {
+        font-size: 14px;
+    }
+
+    .footer-bottom {
+        margin-top: 35px;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 400px) {
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .hero-btn,
+    .hero-btn-outline {
+        width: 200px;
+    }
+
+    .about-content h2 {
+        font-size: 27px;
+    }
+
+    .about-text {
+        font-size: 15px;
+    }
+
+    .education-heading h2 {
+        font-size: 27px;
     }
 
 }

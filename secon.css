@@ -1,37 +1,36 @@
+/* =========================
+   GENERAL
+========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color: whitesmoke;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-
-        min-height: 100vh;
-
-        
-
-        font-family: Arial, sans-serif;
-
-        box-sizing: border-box;
-
-        background-color: whitesmoke;
-      }
-
-.grading-navbar {
-    background-color: #008751;
-    
+    background-color: whitesmoke;
+    font-family: Arial, sans-serif;
+    color: #1f2937;
 }
 
 
+/* =========================
+   NAVBAR
+========================= */
 
+.grading-navbar {
+    background-color: #008751;
+    padding: 15px 0;
+}
 
 .grading-navbar .navbar-brand {
     color: white;
-    font-size: 10px;
+    font-size: 18px;
     font-weight: 700;
 }
 
@@ -39,14 +38,11 @@ body {
     color: white;
 }
 
-
-
-
 .grading-navbar .nav-link {
     color: white;
-    font-size: 10px;
+    font-size: 15px;
     font-weight: 500;
-    margin-left: 15px;
+    margin-left: 18px;
     transition: 0.3s ease;
 }
 
@@ -56,11 +52,8 @@ body {
 
 .grading-navbar .nav-link.active {
     color: white;
-    
+    font-weight: 700;
 }
-
-
-
 
 .grading-navbar .navbar-toggler {
     border: 2px solid white;
@@ -75,294 +68,641 @@ body {
 }
 
 
-      body > div:has(#user) {
-        width: 380px;
+/* =========================
+   PAGE INTRO
+========================= */
 
-        max-width: 92%;
+.page-intro {
+    background-color: #008751;
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+}
 
-        padding: 25px 25px;
+.page-intro .small-title {
+    color: white;
+}
 
-        box-sizing: border-box;
+.page-intro h1 {
+    font-size: clamp(32px, 5vw, 50px);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
 
-        text-align: center;
+.page-intro p:last-child {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: auto;
+}
 
-        background: rgba(255, 255, 255, 0.65);
 
-        border: 1px solid rgba(255, 255, 255, 0.8);
+/* =========================
+   SCORE CHECKER
+========================= */
 
-        border-radius: 20px;
+.checker-section {
+    padding: 70px 20px;
+    background-color: whitesmoke;
+}
 
-        backdrop-filter: blur(15px);
+.checker-card {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
 
-        -webkit-backdrop-filter: blur(15px);
+    padding: 40px 30px;
 
-        box-shadow:
-          0 20px 50px rgba(0, 0, 0, 0.15),
-          0 5px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
 
-        transition: 0.3s ease;
+    background: rgba(255, 255, 255, 0.75);
 
-        margin: 100px auto 0;
-      }
+    border: 1px solid rgba(255, 255, 255, 0.9);
 
-      #user {
-        display: block;
+    border-radius: 20px;
 
-        width: 240px;
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.12);
 
-        max-width: 85%;
+    backdrop-filter: blur(10px);
+}
 
-        height: 40px;
+.checker-card h2 {
+    color: #008751;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
 
-        margin: 0 auto;
+.checker-text {
+    color: #4b5563;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
 
-        padding: 7px 10px;
 
-        box-sizing: border-box;
+/* =========================
+   INPUT
+========================= */
 
-        border: 1px solid #d1d5db;
+#user {
+    display: block;
 
-        border-radius: 8px;
+    width: 100%;
+    max-width: 350px;
 
-        outline: none;
+    height: 48px;
 
-        background: rgba(255, 255, 255, 0.85);
+    margin: auto;
 
-        color: #1f2937;
+    padding: 10px 15px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: white;
+
+    color: #1f2937;
+
+    font-size: 16px;
+
+    transition: 0.3s ease;
+}
+
+#user:focus {
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+#user::placeholder {
+    color: #9ca3af;
+}
+
+
+/* =========================
+   CHECK BUTTON
+========================= */
+
+#check {
+    display: block;
+
+    margin: 15px auto 0;
+
+    padding: 11px 30px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #6366f1;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    box-shadow:
+        0 5px 12px rgba(99, 102, 241, 0.25);
+}
+
+#check:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(99, 102, 241, 0.3);
+}
+
+#check:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+#show {
+    width: 100%;
+    max-width: 350px;
+
+    min-height: 30px;
+
+    margin: 25px auto 0;
+
+    padding: 12px;
+
+    border-radius: 9px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    border: 1px solid rgba(99, 102, 241, 0.15);
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+#show h1 {
+    margin: 0;
+
+    font-size: 20px;
+
+    color: #1f2937;
+
+    font-weight: 700;
+}
+
+
+#remark {
+    width: 100%;
+    max-width: 350px;
+
+    margin: 10px auto 0;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    background: rgba(99, 102, 241, 0.06);
+
+    border: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+#remark p {
+    margin: 0;
+
+    font-size: 15px;
+
+    color: #4b5563;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   GRADING TABLE
+========================= */
+
+.grading-table-section {
+    background-color: white;
+    padding: 80px 20px;
+}
+
+.table-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 35px;
+}
+
+.small-title {
+    color: #008751;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+.table-heading h2 {
+    color: #008751;
+
+    font-size: clamp(28px, 4vw, 40px);
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+}
+
+.table-heading p:last-child {
+    color: #4b5563;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+.table-container {
+    width: 100%;
+    max-width: 800px;
+
+    margin: auto;
+
+    overflow-x: auto;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background-color: white;
+}
+
+th {
+    background-color: #008751;
+
+    color: white;
+
+    padding: 15px;
+
+    text-align: center;
+
+    font-size: 16px;
+}
+
+td {
+    padding: 14px;
+
+    text-align: center;
+
+    border: 1px solid #ddd;
+
+    font-size: 15px;
+}
+
+tbody tr:hover {
+    background-color: #f0fff5;
+}
+
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.how-section {
+    background-color: whitesmoke;
+
+    padding: 80px 20px;
+}
+
+.how-content {
+    text-align: center;
+}
+
+.how-content h2 {
+    color: #008751;
+
+    font-size: clamp(28px, 4vw, 40px);
+
+    margin-bottom: 45px;
+}
+
+.steps {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+.step {
+    background-color: white;
+
+    padding: 30px 25px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.step-number {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    background-color: #008751;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+.step h3 {
+    color: #008751;
+
+    font-size: 19px;
+
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: #4b5563;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer-section {
+    background-color: #008751;
+
+    color: white;
+
+    padding: 55px 20px 20px;
+}
+
+.footer-content {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 60px;
+
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+.footer-section h3 {
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.footer-links h4 {
+    font-size: 17px;
+
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #d9ffd9;
+
+    padding-left: 4px;
+}
+
+.footer-bottom {
+    max-width: 1000px;
+
+    margin: 40px auto 0;
+
+    padding-top: 20px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991px) {
+
+    .grading-navbar .nav-link {
+        margin-left: 10px;
+    }
+
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+
+    .grading-navbar {
+        padding: 12px 0;
+    }
+
+    .grading-navbar .navbar-brand {
+        font-size: 17px;
+    }
+
+    .grading-navbar .navbar-nav {
+        padding-top: 15px;
+    }
+
+    .grading-navbar .nav-link {
+        margin-left: 0;
+
+        padding: 10px 0;
 
         font-size: 15px;
+    }
 
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 
-        transition: 0.3s ease;
-      }
+    .page-intro {
+        padding: 60px 20px;
+    }
 
-      #user::placeholder {
-        color: #9ca3af;
-      }
+    .page-intro h1 {
+        font-size: 34px;
+    }
 
-      #user:focus {
-        border-color: #6366f1;
+    .page-intro p:last-child {
+        font-size: 16px;
+    }
 
-        box-shadow:
-          0 0 0 3px rgba(99, 102, 241, 0.1),
-          0 5px 15px rgba(0, 0, 0, 0.08);
-      }
 
-      #check {
-        display: block;
+    .checker-section {
+        padding: 55px 20px;
+    }
 
-        margin: 12px auto 0;
+    .checker-card {
+        padding: 35px 20px;
+    }
 
-        padding: 9px 22px;
 
-        border: none;
+    .grading-table-section {
+        padding: 60px 15px;
+    }
 
-        border-radius: 7px;
+    .table-heading h2 {
+        font-size: 30px;
+    }
 
-        background: #6366f1;
 
-        color: white;
+    .steps {
+        grid-template-columns: 1fr;
 
-        font-size: 13px;
+        max-width: 400px;
+    }
 
-        font-weight: 700;
 
-        cursor: pointer;
+    .footer-content {
+        grid-template-columns: 1fr;
 
-        box-shadow: 0 5px 12px rgba(99, 102, 241, 0.25);
+        gap: 35px;
+    }
 
-        transition: 0.3s ease;
-      }
+}
 
-      #check:hover {
-        transform: translateY(-2px);
 
-        box-shadow: 0 8px 18px rgba(99, 102, 241, 0.3);
-      }
+/* =========================
+   SMALL PHONES
+========================= */
 
-      #check:active {
-        transform: scale(0.95);
-      }
+@media (max-width: 400px) {
 
-      #show {
-        width: 250px;
+    .page-intro h1 {
+        font-size: 30px;
+    }
 
-        max-width: 85%;
+    .checker-card h2 {
+        font-size: 25px;
+    }
 
-        min-height: 20px;
+    #user {
+        font-size: 15px;
+    }
 
-        margin: 20px auto 0;
-
-        padding: 10px;
-
-        box-sizing: border-box;
-
-        border-radius: 9px;
-
-        background: rgba(255, 255, 255, 0.7);
-
-        border: 1px solid rgba(99, 102, 241, 0.12);
-
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-      }
-
-      #show h1 {
-        margin: 0;
-
-        font-size: 18px;
-
-        color: #1f2937;
-
-        font-weight: 700;
-      }
-
-      #remark {
-        width: 250px;
-
-        max-width: 85%;
-
-        margin: 8px auto 0;
-
-        padding: 8px 10px;
-
-        box-sizing: border-box;
-
-        border-radius: 8px;
-
-        background: rgba(99, 102, 241, 0.06);
-
-        border: 1px solid rgba(99, 102, 241, 0.1);
-      }
-
-      #remark p {
-        margin: 0;
-
+    th,
+    td {
+        padding: 12px 8px;
         font-size: 14px;
+    }
 
-        color: #4b5563;
+}
 
-        font-weight: 600;
-      }
+/* =========================
+   INPUT LABEL
+========================= */
 
-      /* @media (max-width: 600px) {
+.input-label {
+    display: block;
 
-        body {
+    margin-bottom: 8px;
 
-          padding: 15px;
+    color: #1f2937;
 
-        }
+    font-size: 15px;
 
+    font-weight: 700;
 
+    text-align: left;
 
-        body > div:has(#user) {
+    max-width: 350px;
 
-          width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-          max-width: 94%;
 
+.input-help {
+    max-width: 350px;
 
+    margin: 8px auto 0;
 
-          padding: 28px 18px;
+    text-align: left;
 
+    color: #6b7280;
 
-
-          border-radius: 17px;
-
-        }
-
-
-
-        #user {
-
-          width: 220px;
-
-          max-width: 85%;
-
-
-
-          height: 38px;
-
-
-
-          padding: 7px 11px;
-
-
-
-          font-size: 14px;
-
-        }
-
-
-
-        #check {
-
-          padding: 8px 20px;
-
-
-
-          font-size: 12px;
-
-        }
-
-
-
-        #show,
-
-        #remark {
-
-          width: 230px;
-
-          max-width: 85%;
-
-        }
-
-
-
-        #show h1 {
-
-          font-size: 17px;
-
-        }
-
-
-
-        #remark p {
-
-          font-size: 13px;
-
-        }
-
-      }
-
-
-
-      @media (max-width: 380px) {
-
-        body > div:has(#user) {
-
-          width: 310px;
-
-          padding: 25px 12px;
-
-        }
-
-
-
-        #user {
-
-          width: 200px;
-
-        }
-
-
-
-        #show,
-
-        #remark {
-
-          width: 210px;
-
-        }
-
-      } */
+    font-size: 13px;
+}
