@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+body {
+
+        min-height: 100vh;
+
+        
+
+        font-family: Arial, sans-serif;
+
+        box-sizing: border-box;
+
+        background-color: whitesmoke;
+      }
+
+.grading-navbar {
+    background-color: #008751;
+    
+}
+
+
+
+
+.grading-navbar .navbar-brand {
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.grading-navbar .navbar-brand:hover {
+    color: white;
+}
+
+
+
+
+.grading-navbar .nav-link {
+    color: white;
+    font-size: 10px;
+    font-weight: 500;
+    margin-left: 15px;
+    transition: 0.3s ease;
+}
+
+.grading-navbar .nav-link:hover {
+    color: #d9ffd9;
+}
+
+.grading-navbar .nav-link.active {
+    color: white;
+    
+}
+
+
+
+
+.grading-navbar .navbar-toggler {
+    border: 2px solid white;
+}
+
+.grading-navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.grading-navbar .navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+
+      body > div:has(#user) {
+        width: 380px;
+
+        max-width: 92%;
+
+        padding: 25px 25px;
+
+        box-sizing: border-box;
+
+        text-align: center;
+
+        background: rgba(255, 255, 255, 0.65);
+
+        border: 1px solid rgba(255, 255, 255, 0.8);
+
+        border-radius: 20px;
+
+        backdrop-filter: blur(15px);
+
+        -webkit-backdrop-filter: blur(15px);
+
+        box-shadow:
+          0 20px 50px rgba(0, 0, 0, 0.15),
+          0 5px 15px rgba(0, 0, 0, 0.08);
+
+        transition: 0.3s ease;
+
+        margin: 100px auto 0;
+      }
+
+      #user {
+        display: block;
+
+        width: 240px;
+
+        max-width: 85%;
+
+        height: 40px;
+
+        margin: 0 auto;
+
+        padding: 7px 10px;
+
+        box-sizing: border-box;
+
+        border: 1px solid #d1d5db;
+
+        border-radius: 8px;
+
+        outline: none;
+
+        background: rgba(255, 255, 255, 0.85);
+
+        color: #1f2937;
+
+        font-size: 15px;
+
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+
+        transition: 0.3s ease;
+      }
+
+      #user::placeholder {
+        color: #9ca3af;
+      }
+
+      #user:focus {
+        border-color: #6366f1;
+
+        box-shadow:
+          0 0 0 3px rgba(99, 102, 241, 0.1),
+          0 5px 15px rgba(0, 0, 0, 0.08);
+      }
+
+      #check {
+        display: block;
+
+        margin: 12px auto 0;
+
+        padding: 9px 22px;
+
+        border: none;
+
+        border-radius: 7px;
+
+        background: #6366f1;
+
+        color: white;
+
+        font-size: 13px;
+
+        font-weight: 700;
+
+        cursor: pointer;
+
+        box-shadow: 0 5px 12px rgba(99, 102, 241, 0.25);
+
+        transition: 0.3s ease;
+      }
+
+      #check:hover {
+        transform: translateY(-2px);
+
+        box-shadow: 0 8px 18px rgba(99, 102, 241, 0.3);
+      }
+
+      #check:active {
+        transform: scale(0.95);
+      }
+
+      #show {
+        width: 250px;
+
+        max-width: 85%;
+
+        min-height: 20px;
+
+        margin: 20px auto 0;
+
+        padding: 10px;
+
+        box-sizing: border-box;
+
+        border-radius: 9px;
+
+        background: rgba(255, 255, 255, 0.7);
+
+        border: 1px solid rgba(99, 102, 241, 0.12);
+
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+      }
+
+      #show h1 {
+        margin: 0;
+
+        font-size: 18px;
+
+        color: #1f2937;
+
+        font-weight: 700;
+      }
+
+      #remark {
+        width: 250px;
+
+        max-width: 85%;
+
+        margin: 8px auto 0;
+
+        padding: 8px 10px;
+
+        box-sizing: border-box;
+
+        border-radius: 8px;
+
+        background: rgba(99, 102, 241, 0.06);
+
+        border: 1px solid rgba(99, 102, 241, 0.1);
+      }
+
+      #remark p {
+        margin: 0;
+
+        font-size: 14px;
+
+        color: #4b5563;
+
+        font-weight: 600;
+      }
+
+      /* @media (max-width: 600px) {
+
+        body {
+
+          padding: 15px;
+
+        }
+
+
+
+        body > div:has(#user) {
+
+          width: 340px;
+
+          max-width: 94%;
+
+
+
+          padding: 28px 18px;
+
+
+
+          border-radius: 17px;
+
+        }
+
+
+
+        #user {
+
+          width: 220px;
+
+          max-width: 85%;
+
+
+
+          height: 38px;
+
+
+
+          padding: 7px 11px;
+
+
+
+          font-size: 14px;
+
+        }
+
+
+
+        #check {
+
+          padding: 8px 20px;
+
+
+
+          font-size: 12px;
+
+        }
+
+
+
+        #show,
+
+        #remark {
+
+          width: 230px;
+
+          max-width: 85%;
+
+        }
+
+
+
+        #show h1 {
+
+          font-size: 17px;
+
+        }
+
+
+
+        #remark p {
+
+          font-size: 13px;
+
+        }
+
+      }
+
+
+
+      @media (max-width: 380px) {
+
+        body > div:has(#user) {
+
+          width: 310px;
+
+          padding: 25px 12px;
+
+        }
+
+
+
+        #user {
+
+          width: 200px;
+
+        }
+
+
+
+        #show,
+
+        #remark {
+
+          width: 210px;
+
+        }
+
+      } */
