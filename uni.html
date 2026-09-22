@@ -15,18 +15,13 @@
     />
 
     <link rel="stylesheet" href="secon.css" />
-    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon" />
   </head>
 
   <body>
-
-    
     <nav class="navbar navbar-expand-md grading-navbar">
       <div class="container">
-
-        <a class="navbar-brand" href="index.html">
-          Nigerian Grading System
-        </a>
+        <a class="navbar-brand" href="index.html"> Nigerian Grading System </a>
 
         <button
           class="navbar-toggler"
@@ -41,135 +36,85 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarMenu">
-
           <ul class="navbar-nav ms-auto">
-
             <li class="nav-item">
-              <a class="nav-link" href="index.html">
-                Home
-              </a>
+              <a class="nav-link" href="index.html"> Home </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="index.html#hero">
-                About
-              </a>
+              <a class="nav-link" href="index.html#hero"> About </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="secondary.html">
-                Secondary School
-              </a>
+              <a class="nav-link" href="secondary.html"> Secondary School </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="poly.html">
-                Polytechnic
-              </a>
+              <a class="nav-link" href="poly.html"> Polytechnic </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link active" href="uni.html">
-                University
-              </a>
+              <a class="nav-link active" href="uni.html"> University </a>
             </li>
-
           </ul>
-
         </div>
       </div>
     </nav>
 
-
-    
     <section class="page-intro">
+      <p class="small-title">UNIVERSITY</p>
 
-      <p class="small-title">
-        UNIVERSITY
-      </p>
-
-      <h1>
-        University Grading System
-      </h1>
+      <h1>University Grading System</h1>
 
       <p>
-        Enter your examination score to find your corresponding
-        grade, grade point and academic remark.
+        Enter your examination score to find your corresponding grade, grade
+        point and academic remark.
       </p>
-
     </section>
 
-
-    
     <section class="checker-section">
-
       <div class="checker-card">
-
-        <h2>
-          Check Your Grade
-        </h2>
+        <h2>Check Your Grade</h2>
 
         <p class="checker-text">
-          Enter your score between 0 and 5.0
-          We will calculate your grade and grade point.
+          Enter your score between 0 and 5.0 We will calculate your grade and
+          grade point.
         </p>
 
-        <label class="input-label" for="user">
-          Enter Your Score
-        </label>
+        <label class="input-label" for="user"> Enter Your Score </label>
 
-        <input
-          id="user"
-          type="number"
-          placeholder="Example: 4.50"
-        />
+        <input id="user" type="number" placeholder="Example: 4.50" />
 
-        <p class="input-help">
-          Your score should be between 0 and 5.0
-        </p>
+        <p class="input-help">Your score should be between 0 and 5.0</p>
 
         <button
+          style="background-color: #008751"
           onclick="checkGrade()"
           id="check"
         >
-          Check Grade
+          Check Classification
         </button>
 
         <div id="show"></div>
 
         <div id="remark"></div>
-
       </div>
-
     </section>
 
-
-    
     <section class="grading-table-section">
-
       <div class="table-heading">
+        <p class="small-title">UNIVERSITY GRADING SCALE</p>
 
-        <p class="small-title">
-          UNIVERSITY GRADING SCALE
-        </p>
-
-        <h2>
-          Understand Your Grade Point
-        </h2>
+        <h2>Understand Your Grade Point</h2>
 
         <p>
-          Use the grading scale below to understand
-          how your score corresponds to a grade and
-          grade point.
+          Use the grading scale below to understand how your score corresponds
+          to a grade and grade point.
         </p>
-
       </div>
 
-
       <div class="table-container">
-
         <table>
-
           <thead>
             <tr>
               <th>Score</th>
@@ -179,7 +124,6 @@
           </thead>
 
           <tbody>
-
             <tr>
               <td>70 - 100</td>
               <td>A</td>
@@ -215,148 +159,73 @@
               <td>F</td>
               <td>0.00</td>
             </tr>
-
           </tbody>
-
         </table>
-
       </div>
-
     </section>
 
-
-    
     <section class="how-section">
-
       <div class="how-content">
+        <p class="small-title">SIMPLE STEPS</p>
 
-        <p class="small-title">
-          SIMPLE STEPS
-        </p>
-
-        <h2>
-          How to Use the Grade Checker
-        </h2>
+        <h2>How to Use the Grade Checker</h2>
 
         <div class="steps">
-
           <div class="step">
+            <div class="step-number">1</div>
 
-            <div class="step-number">
-              1
-            </div>
+            <h3>Enter Your Grade Point</h3>
 
-            <h3>
-              Enter Your Grade Point
-            </h3>
-
-            <p>
-              Enter your examination grade point
-              in the input field.
-            </p>
-
+            <p>Enter your examination grade point in the input field.</p>
           </div>
 
-
           <div class="step">
+            <div class="step-number">2</div>
 
-            <div class="step-number">
-              2
-            </div>
+            <h3>Check Your Grade</h3>
 
-            <h3>
-              Check Your Grade
-            </h3>
-
-            <p>
-              Click the Check Grade button
-              to calculate your result.
-            </p>
-
+            <p>Click the Check Grade button to calculate your result.</p>
           </div>
 
-
           <div class="step">
+            <div class="step-number">3</div>
 
-            <div class="step-number">
-              3
-            </div>
+            <h3>View Your Result</h3>
 
-            <h3>
-              View Your Result
-            </h3>
-
-            <p>
-              Your grade, grade point and
-              remark will be displayed.
-            </p>
-
+            <p>Your grade, grade point and remark will be displayed.</p>
           </div>
-
         </div>
-
       </div>
-
     </section>
 
-
-    
     <footer class="footer-section">
-
       <div class="footer-content">
-
         <div>
-
-          <h3>
-            Nigerian Grading System
-          </h3>
+          <h3>Nigerian Grading System</h3>
 
           <p>
-            A simple tool designed to help students
-            understand their academic scores and
-            grading systems.
+            A simple tool designed to help students understand their academic
+            scores and grading systems.
           </p>
-
         </div>
-
 
         <div class="footer-links">
+          <h4>Quick Links</h4>
 
-          <h4>
-            Quick Links
-          </h4>
+          <a href="index.html"> Home </a>
 
-          <a href="index.html">
-            Home
-          </a>
+          <a href="secondary.html"> Secondary School </a>
 
-          <a href="secondary.html">
-            Secondary School
-          </a>
+          <a href="poly.html"> Polytechnic </a>
 
-          <a href="poly.html">
-            Polytechnic
-          </a>
-
-          <a href="university.html">
-            University
-          </a>
-
+          <a href="university.html"> University </a>
         </div>
-
       </div>
-
 
       <div class="footer-bottom">
-
-        <p>
-          © 2026 Nigerian Grading System. All rights reserved.
-        </p>
-
+        <p>© 2026 Nigerian Grading System. All rights reserved.</p>
       </div>
-
     </footer>
-
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
@@ -365,6 +234,5 @@
     ></script>
 
     <script src="uni.js"></script>
-
   </body>
 </html>

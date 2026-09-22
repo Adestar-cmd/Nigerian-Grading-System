@@ -1,466 +1,282 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Polytechnic Grading System</title>
 
     <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-        crossorigin="anonymous"
-    >
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="secon.css">
-    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="secon.css" />
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon" />
+  </head>
 
-</head>
-
-
-<body>
-
-
-
-
-<nav class="navbar navbar-expand-md grading-navbar">
-
-    <div class="container">
-
-        <a class="navbar-brand" href="index.html">
-            Nigerian Grading System
-        </a>
-
+  <body>
+    <nav class="navbar navbar-expand-md grading-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"> Nigerian Grading System </a>
 
         <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarMenu"
-            aria-controls="navbarMenu"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarMenu"
+          aria-controls="navbarMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-
-            <span class="navbar-toggler-icon"></span>
-
+          <span class="navbar-toggler-icon"></span>
         </button>
 
-
         <div class="collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"> Home </a>
+            </li>
 
-            <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#learn"> About </a>
+            </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">
-                        Home
-                    </a>
-                </li>
+            <li class="nav-item">
+              <a class="nav-link" href="secondary.html"> Secondary School </a>
+            </li>
 
+            <li class="nav-item">
+              <a class="nav-link active" href="poly.html"> Polytechnic </a>
+            </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#learn">
-                        About
-                    </a>
-                </li>
-
-
-                <li class="nav-item">
-                    <a class="nav-link" href="secondary.html">
-                        Secondary School
-                    </a>
-                </li>
-
-
-                <li class="nav-item">
-                    <a class="nav-link active" href="poly.html">
-                        Polytechnic
-                    </a>
-                </li>
-
-
-                <li class="nav-item">
-                    <a class="nav-link" href="uni.html">
-                        University
-                    </a>
-                </li>
-
-            </ul>
-
+            <li class="nav-item">
+              <a class="nav-link" href="uni.html"> University </a>
+            </li>
+          </ul>
         </div>
+      </div>
+    </nav>
 
-    </div>
+    <section class="page-intro">
+      <div class="container">
+        <p class="small-title">POLYTECHNIC</p>
 
-</nav>
-
-
-
-
-
-<section class="page-intro">
-
-    <div class="container">
-
-        <p class="small-title">
-            POLYTECHNIC
-        </p>
-
-        <h1>
-            Polytechnic Grading System
-        </h1>
+        <h1>Polytechnic Grading System</h1>
 
         <p>
-            Enter your examination score to find your grade,
-            grade point and academic remark.
+          Enter your examination score to find your grade, grade point and
+          academic remark.
         </p>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-
-
-
-
-<section class="checker-section">
-
-    <div class="container">
-
+    <section class="checker-section">
+      <div class="container">
         <div class="checker-card">
+          <h2>Check Your Grade</h2>
 
-            <h2>
-                Check Your Grade
-            </h2>
+          <p class="checker-text">
+            Enter a score between 0 and 4.0 We'll show you the corresponding
+            grade and grade point.
+          </p>
 
-            <p class="checker-text">
-                Enter a score between 0 and 4.0
-                We'll show you the corresponding grade
-                and grade point.
-            </p>
+          <label for="user" class="input-label"> Enter Your Grade Point </label>
 
+          <input placeholder="Example: 3.0" id="user" type="number" />
 
-            <label for="user" class="input-label">
-                Enter Your Grade Point
-            </label>
+          <p class="input-help">Your score should be between 0 and 4.0</p>
 
+          <button
+            style="background-color: #008751"
+            onclick="checkGrade()"
+            id="check"
+          >
+            Check Grade
+          </button>
 
-            <input
-                placeholder="Example: 3.0"
-                id="user"
-                type="number"
-            >
+          <!-- RESULT -->
 
+          <div id="show"></div>
 
-            <p class="input-help">
-                Your score should be between 0 and 4.0
-            </p>
-
-
-            <button
-                onclick="checkGrade()"
-                id="check"
-            >
-                Check Grade
-            </button>
-
-
-            <!-- RESULT -->
-
-            <div id="show"></div>
-
-            <div id="remark"></div>
-
+          <div id="remark"></div>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-
-
-<!-- =========================
+    <!-- =========================
      GRADING SCALE
 ========================= -->
 
-<section class="grading-table-section">
-
-    <div class="container">
-
+    <section class="grading-table-section">
+      <div class="container">
         <div class="table-heading">
+          <p class="small-title">POLYTECHNIC GRADING SCALE</p>
 
-            <p class="small-title">
-                POLYTECHNIC GRADING SCALE
-            </p>
+          <h2>Understand Your Score</h2>
 
-            <h2>
-                Understand Your Score
-            </h2>
-
-            <p>
-                Use this grading scale to understand how your
-                score is converted into a grade and grade point.
-            </p>
-
+          <p>
+            Use this grading scale to understand how your score is converted
+            into a grade and grade point.
+          </p>
         </div>
-
 
         <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Score</th>
 
-            <table>
+                <th>Grade</th>
 
-                <thead>
+                <th>Grade Point</th>
+              </tr>
+            </thead>
 
-                    <tr>
+            <tbody>
+              <tr>
+                <td>75 - 100</td>
+                <td>A</td>
+                <td>4.00</td>
+              </tr>
 
-                        <th>
-                            Score
-                        </th>
+              <tr>
+                <td>70 - 74</td>
+                <td>AB</td>
+                <td>3.50</td>
+              </tr>
 
-                        <th>
-                            Grade
-                        </th>
+              <tr>
+                <td>65 - 69</td>
+                <td>B</td>
+                <td>3.25</td>
+              </tr>
 
-                        <th>
-                            Grade Point
-                        </th>
+              <tr>
+                <td>60 - 64</td>
+                <td>BC</td>
+                <td>3.00</td>
+              </tr>
 
-                    </tr>
+              <tr>
+                <td>55 - 59</td>
+                <td>C</td>
+                <td>2.75</td>
+              </tr>
 
-                </thead>
+              <tr>
+                <td>50 - 54</td>
+                <td>CD</td>
+                <td>2.50</td>
+              </tr>
 
+              <tr>
+                <td>45 - 49</td>
+                <td>D</td>
+                <td>2.25</td>
+              </tr>
 
-                <tbody>
+              <tr>
+                <td>40 - 44</td>
+                <td>E</td>
+                <td>2.00</td>
+              </tr>
 
-                    <tr>
-                        <td>75 - 100</td>
-                        <td>A</td>
-                        <td>4.00</td>
-                    </tr>
-
-                    <tr>
-                        <td>70 - 74</td>
-                        <td>AB</td>
-                        <td>3.50</td>
-                    </tr>
-
-                    <tr>
-                        <td>65 - 69</td>
-                        <td>B</td>
-                        <td>3.25</td>
-                    </tr>
-
-                    <tr>
-                        <td>60 - 64</td>
-                        <td>BC</td>
-                        <td>3.00</td>
-                    </tr>
-
-                    <tr>
-                        <td>55 - 59</td>
-                        <td>C</td>
-                        <td>2.75</td>
-                    </tr>
-
-                    <tr>
-                        <td>50 - 54</td>
-                        <td>CD</td>
-                        <td>2.50</td>
-                    </tr>
-
-                    <tr>
-                        <td>45 - 49</td>
-                        <td>D</td>
-                        <td>2.25</td>
-                    </tr>
-
-                    <tr>
-                        <td>40 - 44</td>
-                        <td>E</td>
-                        <td>2.00</td>
-                    </tr>
-
-                    <tr>
-                        <td>Below 40</td>
-                        <td>F</td>
-                        <td>0.00</td>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
+              <tr>
+                <td>Below 40</td>
+                <td>F</td>
+                <td>0.00</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-
-
-<!-- =========================
+    <!-- =========================
      HOW TO USE
 ========================= -->
 
-<section class="how-section">
-
-    <div class="container">
-
+    <section class="how-section">
+      <div class="container">
         <div class="how-content">
+          <p class="small-title">HOW TO USE</p>
 
-            <p class="small-title">
-                HOW TO USE
-            </p>
+          <h2>Check Your Result in 3 Easy Steps</h2>
 
-            <h2>
-                Check Your Result in 3 Easy Steps
-            </h2>
+          <div class="steps">
+            <div class="step">
+              <div class="step-number">1</div>
 
+              <h3>Enter Your Score</h3>
 
-            <div class="steps">
-
-
-                <div class="step">
-
-                    <div class="step-number">
-                        1
-                    </div>
-
-                    <h3>
-                        Enter Your Score
-                    </h3>
-
-                    <p>
-                        Type your examination score into
-                        the score box.
-                    </p>
-
-                </div>
-
-
-                <div class="step">
-
-                    <div class="step-number">
-                        2
-                    </div>
-
-                    <h3>
-                        Click Check Grade
-                    </h3>
-
-                    <p>
-                        Click the button to calculate
-                        your result.
-                    </p>
-
-                </div>
-
-
-                <div class="step">
-
-                    <div class="step-number">
-                        3
-                    </div>
-
-                    <h3>
-                        View Your Result
-                    </h3>
-
-                    <p>
-                        Your grade, grade point and remark
-                        will be displayed.
-                    </p>
-
-                </div>
-
-
+              <p>Type your examination score into the score box.</p>
             </div>
 
+            <div class="step">
+              <div class="step-number">2</div>
+
+              <h3>Click Check Grade</h3>
+
+              <p>Click the button to calculate your result.</p>
+            </div>
+
+            <div class="step">
+              <div class="step-number">3</div>
+
+              <h3>View Your Result</h3>
+
+              <p>Your grade, grade point and remark will be displayed.</p>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-
-
-<!-- =========================
+    <!-- =========================
      FOOTER
 ========================= -->
 
-<footer class="footer-section">
-
-    <div class="container">
-
+    <footer class="footer-section">
+      <div class="container">
         <div class="footer-content">
-
-            <div class="footer-brand">
-
-                <h3>
-                    Nigerian Grading System
-                </h3>
-
-                <p>
-                    A simple platform for understanding and
-                    calculating academic grades in Nigeria.
-                </p>
-
-            </div>
-
-
-            <div class="footer-links">
-
-                <h4>
-                    Quick Links
-                </h4>
-
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a href="secondary.html">
-                    Secondary School
-                </a>
-
-                <a href="poly.html">
-                    Polytechnic
-                </a>
-
-                <a href="uni.html">
-                    University
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="footer-bottom">
+          <div class="footer-brand">
+            <h3>Nigerian Grading System</h3>
 
             <p>
-                &copy; 2026 Nigerian Grading System.
-                All rights reserved.
+              A simple platform for understanding and calculating academic
+              grades in Nigeria.
             </p>
+          </div>
 
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+
+            <a href="index.html"> Home </a>
+
+            <a href="secondary.html"> Secondary School </a>
+
+            <a href="poly.html"> Polytechnic </a>
+
+            <a href="uni.html"> University </a>
+          </div>
         </div>
 
-    </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Nigerian Grading System. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
 
-</footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrVFcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
 
-
-
-<script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrVFcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous">
-</script>
-
-<script src="poly.js"></script>
-
-</body>
-
+    <script src="poly.js"></script>
+  </body>
 </html>

@@ -1,9 +1,7 @@
 <!doctype html>
 
 <html lang="en">
-
-<head>
-
+  <head>
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,411 +9,247 @@
     <title>Secondary School Grading System</title>
 
     <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-        crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="secon.css">
-    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="secon.css" />
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon" />
+  </head>
 
-</head>
-
-
-<body>
-
-
-    
-
+  <body>
     <nav class="navbar navbar-expand-md grading-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"> Nigerian Grading System </a>
 
-        <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarMenu"
+          aria-controls="navbarMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <a class="navbar-brand" href="index.html">
-                Nigerian Grading System
-            </a>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"> Home </a>
+            </li>
 
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#learn"> About </a>
+            </li>
 
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarMenu"
-                aria-controls="navbarMenu"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
+            <li class="nav-item">
+              <a class="nav-link active" href="secondary.html">
+                Secondary School
+              </a>
+            </li>
 
-                <span class="navbar-toggler-icon"></span>
+            <li class="nav-item">
+              <a class="nav-link" href="poly.html"> Polytechnic </a>
+            </li>
 
-            </button>
-
-
-            <div class="collapse navbar-collapse" id="navbarMenu">
-
-                <ul class="navbar-nav ms-auto">
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">
-                            Home
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#learn">
-                            About
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="secondary.html">
-                            Secondary School
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="poly.html">
-                            Polytechnic
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="uni.html">
-                            University
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
+            <li class="nav-item">
+              <a class="nav-link" href="uni.html"> University </a>
+            </li>
+          </ul>
         </div>
-
+      </div>
     </nav>
 
-
-
-    
-
     <section class="page-intro">
+      <div class="container">
+        <p class="small-title">SECONDARY SCHOOL</p>
 
-        <div class="container">
+        <h1>Secondary School Grading System</h1>
 
-            <p class="small-title">
-                SECONDARY SCHOOL
-            </p>
-
-            <h1>
-                Secondary School Grading System
-            </h1>
-
-            <p>
-                Enter your examination score below to find your grade
-                and understand your academic performance.
-            </p>
-
-        </div>
-
+        <p>
+          Enter your examination score below to find your grade and understand
+          your academic performance.
+        </p>
+      </div>
     </section>
-
-
-
-    
 
     <section class="checker-section">
+      <div class="container">
+        <div class="checker-card">
+          <h2>Check Your Grade</h2>
 
-        <div class="container">
+          <p class="checker-text">
+            Enter a score between 0 and 100 to see your corresponding grade and
+            remark.
+          </p>
 
-            <div class="checker-card">
+          <input
+            placeholder="Enter your score"
+            id="user"
+            type="number"
+            min="0"
+            max="100"
+          />
 
-                <h2>
-                    Check Your Grade
-                </h2>
+          <button
+            style="background-color: #008751"
+            onclick="checkGrade()"
+            id="check"
+          >
+            Check Grade
+          </button>
 
-                <p class="checker-text">
-                    Enter a score between 0 and 100 to see your
-                    corresponding grade and remark.
-                </p>
+          <div id="show"></div>
 
-
-                <input
-                    placeholder="Enter your score"
-                    id="user"
-                    type="number"
-                    min="0"
-                    max="100"
-                />
-
-
-                <button
-                    onclick="checkGrade()"
-                    id="check"
-                >
-                    Check Grade
-                </button>
-
-
-                <div id="show"></div>
-
-                <div id="remark"></div>
-
-            </div>
-
+          <div id="remark"></div>
         </div>
-
+      </div>
     </section>
-
-
-
-    
 
     <section class="grading-table-section">
+      <div class="container">
+        <div class="table-heading">
+          <p class="small-title">GRADE GUIDE</p>
 
-        <div class="container">
+          <h2>Secondary School Grading Scale</h2>
 
-            <div class="table-heading">
-
-                <p class="small-title">
-                    GRADE GUIDE
-                </p>
-
-                <h2>
-                    Secondary School Grading Scale
-                </h2>
-
-                <p>
-                    Use the table below to understand the grade
-                    associated with each score range.
-                </p>
-
-            </div>
-
-
-            <div class="table-container">
-
-                <table>
-
-                    <thead>
-
-                        <tr>
-                            <th>Score</th>
-                            <th>Grade</th>
-                            <th>Remark</th>
-                        </tr>
-
-                    </thead>
-
-
-                    <tbody>
-
-                        <tr>
-                            <td>75 - 100</td>
-                            <td>A</td>
-                            <td>Excellent</td>
-                        </tr>
-
-                        <tr>
-                            <td>70 - 74</td>
-                            <td>B</td>
-                            <td>Very Good</td>
-                        </tr>
-
-                        <tr>
-                            <td>60 - 69</td>
-                            <td>C</td>
-                            <td>Good</td>
-                        </tr>
-
-                        <tr>
-                            <td>50 - 59</td>
-                            <td>D</td>
-                            <td>Credit</td>
-                        </tr>
-
-                        <tr>
-                            <td>45 - 49</td>
-                            <td>E</td>
-                            <td>Pass</td>
-                        </tr>
-
-                        <tr>
-                            <td>0 - 44</td>
-                            <td>F</td>
-                            <td>Fail</td>
-                        </tr>
-
-                    </tbody>
-
-                </table>
-
-            </div>
-
+          <p>
+            Use the table below to understand the grade associated with each
+            score range.
+          </p>
         </div>
 
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Score</th>
+                <th>Grade</th>
+                <th>Remark</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>75 - 100</td>
+                <td>A</td>
+                <td>Excellent</td>
+              </tr>
+
+              <tr>
+                <td>70 - 74</td>
+                <td>B</td>
+                <td>Very Good</td>
+              </tr>
+
+              <tr>
+                <td>60 - 69</td>
+                <td>C</td>
+                <td>Good</td>
+              </tr>
+
+              <tr>
+                <td>50 - 59</td>
+                <td>D</td>
+                <td>Credit</td>
+              </tr>
+
+              <tr>
+                <td>45 - 49</td>
+                <td>E</td>
+                <td>Pass</td>
+              </tr>
+
+              <tr>
+                <td>0 - 44</td>
+                <td>F</td>
+                <td>Fail</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </section>
-
-
-
-    
 
     <section class="how-section">
+      <div class="container">
+        <div class="how-content">
+          <p class="small-title">HOW IT WORKS</p>
 
-        <div class="container">
+          <h2>Check Your Grade in Three Steps</h2>
 
-            <div class="how-content">
+          <div class="steps">
+            <div class="step">
+              <div class="step-number">1</div>
 
-                <p class="small-title">
-                    HOW IT WORKS
-                </p>
+              <h3>Enter Your Score</h3>
 
-                <h2>
-                    Check Your Grade in Three Steps
-                </h2>
-
-
-                <div class="steps">
-
-
-                    <div class="step">
-
-                        <div class="step-number">
-                            1
-                        </div>
-
-                        <h3>
-                            Enter Your Score
-                        </h3>
-
-                        <p>
-                            Enter your examination score in the
-                            score box above.
-                        </p>
-
-                    </div>
-
-
-                    <div class="step">
-
-                        <div class="step-number">
-                            2
-                        </div>
-
-                        <h3>
-                            Check Your Grade
-                        </h3>
-
-                        <p>
-                            Click the Check Grade button to process
-                            your score.
-                        </p>
-
-                    </div>
-
-
-                    <div class="step">
-
-                        <div class="step-number">
-                            3
-                        </div>
-
-                        <h3>
-                            View Your Result
-                        </h3>
-
-                        <p>
-                            Your grade and academic remark will
-                            appear immediately.
-                        </p>
-
-                    </div>
-
-
-                </div>
-
+              <p>Enter your examination score in the score box above.</p>
             </div>
 
-        </div>
+            <div class="step">
+              <div class="step-number">2</div>
 
+              <h3>Check Your Grade</h3>
+
+              <p>Click the Check Grade button to process your score.</p>
+            </div>
+
+            <div class="step">
+              <div class="step-number">3</div>
+
+              <h3>View Your Result</h3>
+
+              <p>Your grade and academic remark will appear immediately.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-
-
-    
-
     <footer class="footer-section">
+      <div class="container">
+        <div class="footer-content">
+          <div>
+            <h3>Nigerian Grading System</h3>
 
-        <div class="container">
+            <p>
+              A simple platform for understanding and calculating academic
+              grades in Nigeria.
+            </p>
+          </div>
 
-            <div class="footer-content">
+          <div class="footer-links">
+            <h4>Quick Links</h4>
 
-                <div>
+            <a href="index.html"> Home </a>
 
-                    <h3>
-                        Nigerian Grading System
-                    </h3>
+            <a href="index.html#learn"> About </a>
 
-                    <p>
-                        A simple platform for understanding and
-                        calculating academic grades in Nigeria.
-                    </p>
+            <a href="secondary.html"> Secondary School </a>
 
-                </div>
+            <a href="poly.html"> Polytechnic </a>
 
-
-                <div class="footer-links">
-
-                    <h4>
-                        Quick Links
-                    </h4>
-
-                    <a href="index.html">
-                        Home
-                    </a>
-
-                    <a href="index.html#learn">
-                        About
-                    </a>
-
-                    <a href="secondary.html">
-                        Secondary School
-                    </a>
-
-                    <a href="poly.html">
-                        Polytechnic
-                    </a>
-
-                    <a href="uni.html">
-                        University
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="footer-bottom">
-
-                <p>
-                    &copy; 2026 Nigerian Grading System. All rights reserved.
-                </p>
-
-            </div>
-
+            <a href="uni.html"> University </a>
+          </div>
         </div>
 
+        <div class="footer-bottom">
+          <p>&copy; 2026 Nigerian Grading System. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
 
-
-
     <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous">
-    </script>
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="script.js"></script>
-
-</body>
-
+  </body>
 </html>

@@ -4,14 +4,30 @@ function checkGrade() {
         let showRemark = document.getElementById("remark");
 
         if (userInput == "") {
-          document.getElementById("show").innerHTML = 'Please kindly input a Score' ;
-          document.getElementById("remark").innerHTML = 'Please kindly input a Score' ;
+          showGrade.innerHTML = `
+            <div class="validation-message">
+              Please kindly input a Score.
+            </div>
+          `;
+          showRemark.innerHTML = "";
+
         } else if (userInput > 100) {
-          document.getElementById("show").innerHTML = 'Enter a valid Score' ;
-          document.getElementById("remark").innerHTML = 'Enter a valid Score' ;
+          showGrade.innerHTML = `
+            <div class="validation-message">
+              Enter a valid Score between 0 and 100.
+            </div>
+          `;
+          showRemark.innerHTML = "";
+          document.getElementById("user").value = "";
+
         } else if (userInput < 0) {
-          document.getElementById("show").innerHTML = 'Enter a valid Score' ;
-          document.getElementById("remark").innerHTML = 'Enter a valid Score' ;
+          showGrade.innerHTML = `
+            <div class="validation-message">
+              Enter a valid Score between 0 and 100.
+            </div>
+          `;
+          showRemark.innerHTML = "";
+
         } else {
           if (userInput >= 70) {
             showGrade.innerHTML = `<h1>${"Your Grade is: A"}</h1>`;
